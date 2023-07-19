@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body >
+    <main class=" position-relative">
+      <div class=" container py-5  d-flex flex-column justify-content-center align-items-center g-3  ">
+          <h1 class=" position-relative ">Bookmarker</h1>
+        <div class="bookmark-body g-3 py-3 px-4 mt-5  w-100 d-flex flex-column justify-content-center align-items-center  ">
+          <h2><i class="fa-regular fa-bookmark"></i> Bookmark your favorite sites <i class="fa-regular fa-bookmark"></i></h2>
+          <div class="bookmark-elment text-start  w-100">
+            <label for="siteName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input id="siteName" type="text" id="siteName" class=" form-control " placeholder=" Bookmark Name">
+          </div>
+       
+          <div class="bookmark-elment text-start  w-100">
+            <label for="siteURL"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input id="siteURL" type="text" id="siteURL" class="form-control" placeholder="Website URL" >
+          </div>
+       
+          <button " id="submit" type="button" class="btn btn-danger">Submit</button>
+        </div>
+        <table class=" table bg-light text-center mt-4">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit	</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+      </div>
+      <div id="poxInfo" class=" pox-info position-absolute w-100 h-100  top-0 d-flex justify-content-center align-items-center d-none ">
+        <div id="box" class=" box bg-body p-4 rounded-2 ">
+          <header class=" d-flex justify-content-between align-items-center">
+            <div class="circels-color  d-flex ">
+              <div class=" rounded-circle px-1"></div>
+              <div class=" rounded-circle px-1"></div>
+              <div class=" rounded-circle px-1"></div>
+            </div>
+            <div class="exit">
+              <button onclick="close()" class=" btn btn-close-white border-0 ">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+              </button>
+            </div>
+          </header>
+          <p class=" pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+  
+            <li class=" pt-2">
+              <i class=" fa-regular fa-circle-right p-2"></i> Site name must contain at least 3 characters
+            </li>
+            <li class=" pt-2">
+              <i class=" fa-regular fa-circle-right p-2"></i>Don't repeat the name of the book
+            </li>
+            <li class=" pt-2">
+              <i class=" fa-regular fa-circle-right p-2"></i> Site URL must be a valid one
+            </li>
+        
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
